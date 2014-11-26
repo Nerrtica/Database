@@ -1,0 +1,12 @@
+CREATE DATABASES `Category` (
+	ID		VARCHAR(40) NOT NULL,
+
+`ID-Info`
+				CHECK(VALUE IN				
+					('fashion/beauty',
+					 'kids/grocery',
+					 'living/health',
+					 'computer/digiter',
+					 'culture/travel/e-coupon',
+					 'sports/car/hobby',)),	
+					)
