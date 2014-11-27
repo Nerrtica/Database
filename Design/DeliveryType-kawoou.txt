@@ -1,0 +1,13 @@
+CREATE DATABASES `DeliveryType` (
+	id		INT(60) NOT NULL auto_increment,
+	product_id	INT(60) NOT NULL,
+	type_name	VARCHAR(100) NOT NULL CONSTRAINT `delivery_type`
+				CHECK(VALUE IN('PRE', 'POST', 'INTERNATIONAL')),
+	price		INT(60) NOT NULL DEFAULT '3000',
+	delivery_time	INT(60) NOT NULL DEFAULT '0',
+	
+	PRIMARY KEY(id),
+	FOREIGN KEY(product_id) REFERENCES `Products`(id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE
+)

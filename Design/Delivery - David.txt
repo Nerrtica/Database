@@ -1,12 +1,16 @@
 CREATE DATABASES `Delivery` (
-	PurchaseNum	INTEGER(10) NOT NULL,
-	Adress		VARCHAR,
+	PurchaseNum	INTEGER(60) NOT NULL,
+	Address		VARCHAR,
 	Consumer	VARCHAR(40) NOT NULL,
-	Recipient	VARCHAR(40) NOT NULL
+	Recipient	VARCHAR(40) NOT NULL,
 
 	PRIMARY KEY(PurchaseNum),
+	FOREIGN KEY(PurchaseNum)
+		REFERENCES `Purchases`(id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
 	FOREIGN KEY(Consumer)
-		REFERENCES `Consumer`(UserID)
+		REFERENCES `Users`(UserID)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE,
 )

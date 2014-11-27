@@ -1,0 +1,18 @@
+CREATE DATABASES `Products` (
+	id		INT(60) NOT NULL auto_increment,
+	seller_id	INT(60) NOT NULL,
+	category	INT(60) NOT NULL,
+	product_name	VARCHAR(120) NOT NULL DEFAULT '',
+	price		INT(100) NOT NULL,
+	rating_sum	INT(100) NOT NULL DEFAULT '0',
+	rating_cnt	INT(40) NOT NULL DEFAULT ‘0’,
+	use_options	INT(1) NOT NULL '0',
+	
+	PRIMARY KEY(id),
+	FOREIGN KEY(seller_id) REFERENCES `Users`(UserID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	FOREIGN KEY(category) REFERENCES `Category`(ID)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+)
