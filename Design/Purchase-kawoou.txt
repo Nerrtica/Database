@@ -4,7 +4,7 @@ CREATE TABLE `Purchases` (
 	product_id	INT(60) NOT NULL,
 	product_cnt	INT(40) NOT NULL,
 	use_coupon	INT(60) NULL,
-	purchase_type	INT(10) NOT NULL CONSTRAINT `purchase_type_info`
+	purchase_type	INT(10) NOT NULL
 				CHECK(VALUE IN('CARD', 'CASH', 'MOBILE')),
 	price		INT(100) NOT NULL DEFAULT '0',
 	created		DATETIME NOT NULL DEFAULT ’0000-00-00 00:00:00’,
@@ -19,4 +19,4 @@ CREATE TABLE `Purchases` (
 	FOREIGN KEY(use_coupon) REFERENCES `Coupon`(id)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE
-)
+);

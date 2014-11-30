@@ -6,7 +6,7 @@ CREATE TABLE `Products` (
 	price		INT(100) NOT NULL,
 	rating_sum	INT(100) NOT NULL DEFAULT '0',
 	rating_cnt	INT(40) NOT NULL DEFAULT ‘0’,
-	use_options	INT(1) NOT NULL '0',
+	use_options	INT(1) NOT NULL DEFAULT '0',
 	
 	PRIMARY KEY(id),
 	FOREIGN KEY(seller_id) REFERENCES `Users`(UserID)
@@ -15,4 +15,4 @@ CREATE TABLE `Products` (
 	FOREIGN KEY(category) REFERENCES `Category`(ID)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE,
-)
+);

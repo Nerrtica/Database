@@ -1,7 +1,7 @@
 CREATE TABLE `ProductOptions` (
 	id		INT(60) NOT NULL auto_increment,
 	product_id	INT(60) NOT NULL,
-	title		VARCHAR(120) NOT NULL,
+	title		VARCHAR(120) NOT NULL DEFAULT '',
 	add_price	INT(100) NOT NULL DEFAULT '0',
 
 	PRIMARY KEY(id),

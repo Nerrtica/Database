@@ -1,8 +1,8 @@
 CREATE TABLE `Coupon` (
 	ID		VARCHAR(40) NOT NULL,
 	CouponNum	INTEGER(10) NOT NULL,
-	ValidTerm	INTEGER(2) NOT NULL CONSTRAINT 
+	ValidTerm	INTEGER(2) NOT NULL, 
 	SalePercent	INTEGER(2) NOT NULL,
 
-	PRIMARY KEY(CouponNum),
-)
+	PRIMARY KEY(CouponNum)
+);
