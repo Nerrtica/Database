@@ -1,4 +1,4 @@
-CREATE DATABASES `Category` (
+CREATE TABLE `Category` (
 	ID	INT(60) NOT NULL auto_increment,
 	title	VARCHAR(40) NOT NULL CONTRAINT `ID-Info`
 			CHECK(VALUE IN ('fashion/beauty',

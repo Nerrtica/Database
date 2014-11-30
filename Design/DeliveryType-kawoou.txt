@@ -1,4 +1,4 @@
-CREATE DATABASES `DeliveryType` (
+CREATE TABLE `DeliveryType` (
 	id		INT(60) NOT NULL auto_increment,
 	product_id	INT(60) NOT NULL,
 	type_name	VARCHAR(100) NOT NULL CONSTRAINT `delivery_type`

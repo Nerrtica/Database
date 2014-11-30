@@ -1,4 +1,4 @@
-CREATE DATABASES `ProductOptions` (
+CREATE TABLE `ProductOptions` (
 	id		INT(60) NOT NULL auto_increment,
 	product_id	INT(60) NOT NULL,
 	title		VARCHAR(120) NOT NULL '',
