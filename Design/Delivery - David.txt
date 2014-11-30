@@ -1,6 +1,6 @@
 CREATE TABLE `Delivery` (
 	PurchaseNum	INTEGER(60) NOT NULL,
-	Address		VARCHAR,
+	Address		VARCHAR(100),
 	Consumer	VARCHAR(40) NOT NULL,
 	Recipient	VARCHAR(40) NOT NULL,
 
@@ -13,4 +13,4 @@ CREATE TABLE `Delivery` (
 		REFERENCES `Users`(UserID)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE,
-)
+);

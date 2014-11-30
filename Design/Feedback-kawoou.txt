@@ -3,10 +3,10 @@ CREATE TABLE `Feedback` (
 	product_id	INT(60) NOT NULL,
 	title		VARCHAR(120) NOT NULL DEFAULT '',
 	content		TEXT NOT NULL DEFAULT '',
-	rating		INT(100) NOT NULL '0',
+	rating		INT(100) NOT NULL DEFAULT '0',
 	
 	PRIMARY KEY(user_id, product_id),
 	FOREIGN KEY(user_id) REFERENCES `Users`(UserID)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE
-)
+);
