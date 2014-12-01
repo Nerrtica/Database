@@ -3,7 +3,7 @@ CREATE TABLE `Purchases` (
 	consumer_id	VARCHAR(40) NOT NULL,
 	product_id	INT(60) NOT NULL,
 	product_cnt	INT(40) NOT NULL,
-	use_coupon	INT(60) NULL,
+	use_coupon	INT(20) NULL,
 	purchase_type	INT(10) NOT NULL
 				CHECK(VALUE IN('CARD', 'CASH', 'MOBILE')),
 	price		INT(100) NOT NULL DEFAULT '0',
