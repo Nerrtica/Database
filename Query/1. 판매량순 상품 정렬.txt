@@ -1,0 +1,1 @@
+SELECT P.*, count(U.*) as `purchase_cnt` FROM `Products` as P JOIN `Purchases` as U WHERE U.`product_id` = P.`id` ORDER `purchase_cnt` DESC;

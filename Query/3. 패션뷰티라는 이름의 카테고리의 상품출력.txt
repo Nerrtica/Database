@@ -1,0 +1,1 @@
+SELECT A.* FROM `Products` as A JOIN `Category` as B WHERE B.`title` = 'fashion/beauty' AND B.`ID` = A.`category` ORDER BY `id` DESC;

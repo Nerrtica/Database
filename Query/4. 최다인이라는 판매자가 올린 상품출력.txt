@@ -1,0 +1,1 @@
+SELECT P.* FROM `Products` as P JOIN `Users` as U WHERE U.`Name` = '최다인' AND P.`seller_id` = U.`UserID` ORDER BY id DESC;

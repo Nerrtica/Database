@@ -1,0 +1,13 @@
+SELECT
+	P.*,
+	count(P.*) as `purchase_count`
+FROM
+	`Purchases` as U,
+	`Consumer` as C,
+	`Products` as P
+WHERE
+	C.`Sex` = 'WOMAN' AND
+	U.`consumer_id` = C.`UserID` AND
+	P.`id` = U.`product_id`
+ORDER BY
+	`purchase_count` DESC;

@@ -1,0 +1,1 @@
+SELECT SUM(`price`) FROM `Purchases` WHERE '2014-11-01' <= `created` AND `created` < '2014-12-01';

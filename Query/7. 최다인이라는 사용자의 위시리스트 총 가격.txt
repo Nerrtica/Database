@@ -1,0 +1,15 @@
+SELECT
+	SUM(P.`price` + PO.`add_price`)
+FROM
+	`ProductOptions` as PO,
+	`Products` as P,
+	`Wishlist` as W,
+	`Users` as U
+WHERE
+	U.`Name` = '최다인' AND
+	W.`user_id` = U.`UserID` AND
+	(
+		P.`id` = W.`product_id` AND
+		PO.`id` = W.`product_option_id`
+	)
+;

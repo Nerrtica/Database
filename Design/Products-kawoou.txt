@@ -5,7 +5,7 @@ CREATE DATABASES `Products` (
 	product_name	VARCHAR(120) NOT NULL DEFAULT '',
 	price		INT(100) NOT NULL,
 	rating_sum	INT(100) NOT NULL DEFAULT '0',
-	rating_cnt	INT(40) NOT NULL DEFAULT ‘0’,
+	rating_cnt	INT(40) NOT NULL DEFAULT '0',
 	use_options	INT(1) NOT NULL '0',
 	
 	PRIMARY KEY(id),

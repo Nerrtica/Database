@@ -1,16 +1,20 @@
 CREATE DATABASES `Purchases` (
-	id		INT(60) NOT NULL auto_increment,
-	consumer_id	VARCHAR(40) NOT NULL,
-	product_id	INT(60) NOT NULL,
-	product_cnt	INT(40) NOT NULL,
-	use_coupon	INT(60) NULL,
-	purchase_type	INT(10) NOT NULL CONSTRAINT `purchase_type_info`
-				CHECK(VALUE IN('CARD', 'CASH', 'MOBILE')),
-	price		INT(100) NOT NULL DEFAULT '0',
-	created		DATETIME NOT NULL DEFAULT ’0000-00-00 00:00:00’,
+	id			INT(60) NOT NULL auto_increment,
+	consumer_id		VARCHAR(40) NOT NULL,
+	product_id		INT(60) NOT NULL,
+	product_option_id	INT(60) NOT NULL,
+	product_cnt		INT(40) NOT NULL,
+	use_coupon		INT(60) NULL,
+	purchase_type		INT(10) NOT NULL CONSTRAINT `purchase_type_info`
+					CHECK(VALUE IN('CARD', 'CASH', 'MOBILE')),
+	price			INT(100) NOT NULL DEFAULT '0',
+	created			DATETIME NOT NULL DEFAULT ’0000-00-00 00:00:00’,
 
 	PRIMARY KEY(id),
 	FOREIGN KEY(product_id) REFERENCES `Products`(id)
+		ON DELETE CASCADE
+		ON UPDATE CASCADE,
+	FOREIGN KEY(product_option_id) REFERENCES `ProductOptions`(id)
 		ON DELETE CASCADE
 		ON UPDATE CASCADE,
 	FOREIGN KEY(comsumer_id) REFERENCES `Users`(UserID)

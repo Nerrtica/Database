@@ -1,0 +1,1 @@
+SELECT C.* FROM `Coupon` as C JOIN `Seller` as S WHERE C.`ID` = S.`CompanyID` AND C.`ValidTerm` <= `2014-12-24` ORDER BY C.`ValidTerm` ASC;

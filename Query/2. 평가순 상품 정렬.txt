@@ -1,0 +1,1 @@
+SELECT *, `rating_sum` / `rating_cnt` as `rating_percent` FROM `Products` ORDER BY `rating_percent` DESC;
