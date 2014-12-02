@@ -1,12 +1,12 @@
-CREATE DATABASES `Category` (
+CREATE TABLE 'Category' (
 	ID	INT(60) NOT NULL auto_increment,
-	title	VARCHAR(40) NOT NULL CONTRAINT `ID-Info`
+	title	VARCHAR(40) NOT NULL
 			CHECK(VALUE IN ('fashion/beauty',
 					'kids/grocery',
 					'living/health',
-					'computer/digiter',
+					'computer/digital',
 					'culture/travel/e-coupon',
-					'sports/car/hobby'))
+					'sports/car/hobby')),
 	
 	PRIMARY KEY(ID)
-)
+);

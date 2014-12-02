@@ -1,12 +1,12 @@
-CREATE DATABASES `Feedback` (
+CREATE TABLE `Feedback` (
 	user_id		VARCHAR(40) NOT NULL,
 	product_id	INT(60) NOT NULL,
 	title		VARCHAR(120) NOT NULL DEFAULT '',
-	content		TEXT NOT NULL DEFAULT '',
-	rating		INT(100) NOT NULL '0',
+	content		TEXT NOT NULL,
+	rating		INT(100) NOT NULL DEFAULT '0',
 	
 	PRIMARY KEY(user_id, product_id),
 	FOREIGN KEY(user_id) REFERENCES `Users`(UserID)
-		ON DELETE CASCADE
-		ON UPDATE CASCADE
-)
+		ON DELETE RESTRICT
+		ON UPDATE RESTRICT
+);
